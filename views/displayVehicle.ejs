@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Yo these are some vehicles</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.2/css/bulma.min.css">
+</head>
+
+<body>
+  <h1>Vehicle Records</h1>
+  <br><br>
+  <div class="container">
+    <div class="columns">
+      <div class="column is-1"></div>
+      <div class="column is-2" style="border-style: solid; font-weight: bold;">Description</div>
+      <div class="column is-1" style="border-style: solid; font-weight: bold;">Year</div>
+      <div class="column is-1" style="border-style: solid; font-weight: bold;">Mileage</div>
+      <div class="column is-1" style="border-style: solid; font-weight: bold;">Type</div>
+      <div class="column is-1" style="border-style: solid; font-weight: bold;">Still Using?</div>
+    </div>
+    <% for (let iCount=0; iCount < vehicles.length; iCount++) { %>
+      <div class="columns">
+        <form class="column is-1" action=<%='/delete/' + vehicles[iCount].vehicle_id%> method="POST">
+          <button class="button is-primary is-medium is-outlined">Delete</button>
+        </form>
+        <div class="column is-2" style="border-style: solid;">
+          <%=vehicles[iCount].description%>
+        </div>
+        <div class="column is-1" style="border-style: solid;">
+          <%=vehicles[iCount].year%>
+        </div>
+        <div class="column is-1" style="border-style: solid;">
+          <%=vehicles[iCount].mileage%>
+        </div>
+        <div class="column is-1" style="border-style: solid;">
+          <%=vehicles[iCount].type%>
+        </div>
+        <div class="column is-1" style="border-style: solid;">
+          <%=vehicles[iCount].still_using%>
+        </div>
+        <form class="column is-1" action=<%='/edit/' + vehicles[iCount].vehicle_id%> method="GET">
+          <button class="button is-primary is-medium is-outlined ">Edit</button>
+        </form>
+      </div>
+      <!--<p>We have a <%=vehicles[iCount].year%> <%=vehicles[iCount].description%> with <%=vehicles[iCount].mileage%> miles.</p>-->
+      <%}%>
+        <br><br>
+        <form action="/addVehicle" method="GET">
+          <button class="button is-primary is-large is-outlined">Add</button>
+        </form>
+  </div>
+</body>
+
+</html>

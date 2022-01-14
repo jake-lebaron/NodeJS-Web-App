@@ -1,0 +1,71 @@
+html { height: 100% }
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 470px;
+  flex-flow: wrap;
+  flex-direction: column;
+}
+
+button {
+  margin-bottom: 10px;
+  font-family: 'Fredoka One', cursive;
+}
+
+.indexButton {
+  margin: 40px;
+}
+
+.formButton {
+  margin-left: 60px;
+  margin-top: -50px;
+  display: flex;
+  flex-direction: row;
+}
+
+.formButton button {
+  margin-right: 10px;
+}
+
+.formStyle {
+  font-family: 'Permanent Marker', cursive;
+  font-size: 20px;
+  margin-left: 60px;
+  margin-top: 20px;
+  padding-bottom: 10px;
+  color: rgb(234, 236, 92);
+}
+
+
+.labelHeader {
+  font-size: large;
+  font-weight: 500;
+}
+
+.editBody {
+  background-image: url("../images/garage.png");
+  background-position: 100%;
+  background-size: cover;
+}
+
+.mainBody {
+  background-image: url("../images/garage.png");
+  background-position: 100%;
+  background-size: cover;
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  overflow: hidden;
+}
+
+.formHead{
+  font-family: 'Fredoka One', cursive;
+  font-size: 25px;
+  color: white;
+  text-shadow:1px 1px 10px rgb(24, 185, 118), 1px 1px 10px rgb(28, 192, 124);
+}

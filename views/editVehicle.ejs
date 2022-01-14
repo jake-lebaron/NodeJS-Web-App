@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Balsamiq+Sans:ital,wght@1,700&family=Dela+Gothic+One&display=swap"
+    rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Caveat:wght@700&family=Fredoka+One&family=Permanent+Marker&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.2/css/bulma.min.css">
+  <link rel="stylesheet" href="styles/styles.css">
+</head>
+
+<body class="editBody">
+  <div class="formStyle">
+    <!-- create form that will be autofilled and able to be changed -->
+    <form>
+      <fieldset style="width: 200px;">
+        <label class="formHead">Description</label><br>
+        <input type="text" id="description" name="description" placeholder="Description">
+        <br><br>
+        <label class="formHead">Vehicle Type:</label><br>
+        <input type="radio" value="C" id="vehicleC" name="vehicle">
+        <label>Car</label>
+        <br><br>
+        <input type="radio" value="T" id="vehicleT" name="vehicle">
+        <label>Truck</label>
+        <br><br>
+        <input type="radio" value="B" id="vehicleB" name="vehicle">
+        <label>Bike</label>
+        <br><br>
+        <input type="radio" value="M" id="vehicleM" name="vehicle">
+        <label>Motorcycle</label>
+        <br><br>
+        <label class="formHead">Year: </label><br>
+        <input type="number" min="1950" id="year" name="year" placeholder="Year">
+        <br><br>
+        <label class="formHead">Mileage: </label><br>
+        <input type="number" id="mileage" name="mileage" placeholder="Mileage">
+        <br><br>
+        <label class="formHead">Still Using?:</label><br>
+        <label>Yes</label>
+        <input type="checkbox" id="usingY" name="usingY" checked>
+        <label>&nbsp;&nbsp;&nbsp;No</label>
+        <input type="checkbox" id="usingY" name="usingY">
+      </fieldset>
+    </form>
+  </div>
+  <br><br>
+  <div class="formButton">
+    <form action="/" action="GET">
+      <button class="button is-primary is-outlined">Save</button>
+    </form>
+    <form action="/" action="GET">
+      <button class="button is-primary is-outlined">Cancel</button>
+    </form>
+  </div>
+  <div class="car">
+    <div class="tires"></div>
+    <div class="car-body"></div>
+  </div>
+</body>
+
+</html>
